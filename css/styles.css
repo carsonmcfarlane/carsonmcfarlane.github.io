@@ -1,0 +1,16 @@
+nav ul {
+    list-style: none; /* Removes bullets */
+    padding: 0;
+    display: flex;    /* Makes them horizontal */
+    gap: 15px;       /* Adds space between links */
+}
+
+nav a {
+    text-decoration: none; /* Removes the underline */
+    color: var(--accent); /* Uses your variable! */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}

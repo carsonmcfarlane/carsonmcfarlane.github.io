@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carson McFarlane</title>
+
+    <!-- Basic SEO / social -->
+    <meta name="description" content="Web developer, IT enthusiast, and photographer."/>
+    <meta name="author" content="Carson McFarlane"/>
+
+    <!-- Favicon (add real ones later) -->
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css"/>
+
+    <!-- Minimal JS to start (e.g. smooth scroll, dark mode toggle later) -->
+    <script src="js/main.js" type="module"></script>
+
+    <!-- Modern: system font stack + dark mode support -->
+    <style>
+        /* Box Model Reset */
+        * { box-sizing: border-box; }
+
+        :root {
+            --bg: #ffffff;
+            --text: #0f0f0f;
+            --accent: #0066cc;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --text: #f0f0f0;
+                --accent: #6699ff;
+            }
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            /* line-height: 1.6; */
+            /* padding: 20px; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carson McFarlane</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Web developer, IT enthusiast, and photographer.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <!-- Placeholder for project cards -->
+            <article class="project-card">
+                <h3>Project One</h3>
+                <p>A brief description of the project.</p>
+                <!-- Add links or images as needed -->
+            </article>
+            <!-- More project cards can be added here -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:carson.mcfarlane@example.com">email me!</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Carson McFarlane</p>
+    </footer>
+</body>
+</html>

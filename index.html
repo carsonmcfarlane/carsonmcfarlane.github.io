@@ -16,13 +16,10 @@
     <link rel="stylesheet" href="css/styles.css"/>
 
     <!-- Minimal JS to start (e.g. smooth scroll, dark mode toggle later) -->
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.js" defer></script>
 
     <!-- Modern: system font stack + dark mode support -->
     <style>
-        /* Box Model Reset */
-        * { box-sizing: border-box; }
-
         :root {
             --bg: #ffffff;
             --text: #0f0f0f;
@@ -41,13 +38,14 @@
             background: var(--bg);
             color: var(--text);
             font-family: system-ui, sans-serif;
-            margin: 0;
             /* line-height: 1.6; */
             /* padding: 20px; */
         }
     </style>
+    
 </head>
 <body>
+    
     <header>
         <h1>Carson McFarlane</h1>
         <nav>
@@ -60,9 +58,44 @@
     </header>
 
     <main>
+        <section id="intro">
+            <h2>Hey! I'm Carson</h2>
+            <p>I'm a Creator and Tech Enthusiast.</p>
+        </section>
+
         <section id="about">
             <h2>About Me</h2>
-            <p>Web developer, IT enthusiast, and photographer.</p>
+            <!-- <p>Emerging IT Professional, Photographer, Hobbiest Web Developer.</p> -->
+            <ul>
+                <li>I'm an emerging IT Professional with a passion for technology and problem-solving.</li>
+                <li>A hobbyist Web Developer, building projects to learn, grow my skills, and share my creativity.</li>
+                <li>Photographer, capturing moments and expressing myself through images.</li>
+                <li>Always eager to learn and explore new technologies.</li>
+                <li>Exploring the latest in IT and technology trends.</li>
+                <li>I have a passion for capturing moments through photography.</li>
+                <li>I'm curious and constantly learning.</li>
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <p>Here are some of my IT certifications:</p>
+            <ul>
+                <li>Google IT Support Professional Certificate <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/3580CETPFL1B" target="_blank" rel="noreferrer">View Certificate</a></li>
+                <li>Microsoft IT Support Specialist <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/TZ951V9OE7XB" target="_blank" rel="noreferrer">View Certificate</a></li>
+                <li>IBM IT Support Professional Certificate <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/WTKHVA6XRY1S" target="_blank" rel="noreferrer">View Certificate</a></li>
+                <li>Google IT Automation with Python Professional Certificate <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/6LF7FDT60HVZ" target="_blank" rel="noreferrer">View Certificate</a></li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Here are some of my skills:</p>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li></li>
+                <li>Photography and Photo Editing</li>
+            </ul>
         </section>
 
         <section id="projects">

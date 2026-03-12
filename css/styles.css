@@ -1,8 +1,17 @@
+/* The "Clean Slate" Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 nav ul {
     list-style: none; /* Removes bullets */
     padding: 0;
     display: flex;    /* Makes them horizontal */
-    gap: 15px;       /* Adds space between links */
+    gap: 1rem;       /* Adds space between links */
 }
 
 nav a {
@@ -13,4 +22,35 @@ nav a {
 nav a:hover {
     text-decoration: underline;
     opacity: 0.8;
+}
+
+
+#intro {
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 0vh;
+}
+
+
+
+/* Add breathing room to the whole page */
+body {
+    /* padding: 20px; */
+    line-height: 1.6; /* Makes text much easier to read */
+}
+
+/* Add space below headings and paragraphs */
+h1, h2, h3, p {
+    margin-bottom: 1.2rem; 
+}
+
+/* Space out your sections */
+section {
+    padding: 40px 0; 
+}
+
+a:link {
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: none;
 }

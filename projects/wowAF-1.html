@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carson McFarlane</title>
+
+    <!-- Basic SEO / social -->
+    <meta name="description" content="Web developer, IT enthusiast, and photographer."/>
+    <meta name="author" content="Carson McFarlane"/>
+
+    <!-- Favicon (add real ones later) -->
+    <link rel="icon" href="/assets/icons/favicon.svg" type="/image/svg+xml"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css"/>
+
+    <!-- Minimal JS to start (e.g. smooth scroll, dark mode toggle later) -->
+    <script src="/js/main.js" defer></script>
+
+    <!-- Modern: system font stack + dark mode support -->
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #0f0f0f;
+            --accent: #0066cc;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --text: #f0f0f0;
+                --accent: #6699ff;
+            }
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, sans-serif;
+            /* line-height: 1.6; */
+            /* padding: 20px; */
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <section>
+            <h3>Project: Custom Tooltip Refactor in AuctionFaster – Overcoming WoW Classic Client Changes (TBC Anniversary / WotLK Era)</h3>
+            <h4>Key personal contributions (marked in code comments as "My changes only"):</h4>
+            <ul>
+                <li>Refactored the Inventory module to eliminate dependency on the outdated LibGratuity-3.0 and implement a robust, self-contained tooltip scanner.</li>
+                <li>Implemented a custom tooltip creation and scanning mechanism that directly interacts with the WoW API, ensuring compatibility with the latest client changes.</li>
+                <li>Added comprehensive error handling and fallback logic to gracefully manage edge cases where tooltip data may be incomplete or delayed.</li>
+                <li>Conducted extensive testing across various item types (soulbound, BoP, quest-bound, conjured) to validate the accuracy and reliability of the new tooltip scanning approach.</li>
+                <li>Removed LibGratuity-3.0 usage entirely (commented out LibStub load and all :SetBagItem(), :NumLines(), :GetLine() calls) to avoid compatibility failures.</li>
+                <li>Added a single, reusable hidden tooltip frame created once at module scope:</li>
+            </ul>
+            <p class="code">local tt = CreateFrame("GameTooltip", "CustomAuctionFasterTooltip", nil, "GameTooltipTemplate")
+tt:SetOwner(UIParent, "ANCHOR_NONE")</p>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script>
+        async function loadComponent(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadComponent('header', '/components/header.html');
+        loadComponent('footer', '/components/footer.html');
+    </script>
+</body>
+</body>
+</html>

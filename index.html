@@ -10,13 +10,13 @@
     <meta name="author" content="Carson McFarlane"/>
 
     <!-- Favicon (add real ones later) -->
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml"/>
+    <link rel="icon" href="/assets/icons/favicon.svg" type="/image/svg+xml"/>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
 
     <!-- Minimal JS to start (e.g. smooth scroll, dark mode toggle later) -->
-    <script src="js/main.js" defer></script>
+    <script src="/js/main.js" defer></script>
 
     <!-- Modern: system font stack + dark mode support -->
     <style>
@@ -45,17 +45,7 @@
     
 </head>
 <body>
-    
-    <header>
-        <h1>Carson McFarlane</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
 
     <main>
         <section id="intro">
@@ -81,10 +71,10 @@
             <h2>Certifications</h2>
             <p>Here are some of my IT certifications:</p>
             <ul>
-                <li>Google IT Support Professional Certificate <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/3580CETPFL1B" target="_blank" rel="noreferrer">View Certificate</a></li>
-                <li>Microsoft IT Support Specialist <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/TZ951V9OE7XB" target="_blank" rel="noreferrer">View Certificate</a></li>
-                <li>IBM IT Support Professional Certificate <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/WTKHVA6XRY1S" target="_blank" rel="noreferrer">View Certificate</a></li>
-                <li>Google IT Automation with Python Professional Certificate <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/6LF7FDT60HVZ" target="_blank" rel="noreferrer">View Certificate</a></li>
+                <li>Google IT Support Professional Certificate</li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/3580CETPFL1B" target="_blank" rel="noreferrer">View Certificate</a>
+                <li>Microsoft IT Support Specialist</li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/TZ951V9OE7XB" target="_blank" rel="noreferrer">View Certificate</a>
+                <li>IBM IT Support Professional Certificate</li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/WTKHVA6XRY1S" target="_blank" rel="noreferrer">View Certificate</a>
+                <li>Google IT Automation with Python Professional Certificate</li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/6LF7FDT60HVZ" target="_blank" rel="noreferrer">View Certificate</a>
             </ul>
         </section>
 
@@ -102,8 +92,10 @@
             <h2>Projects</h2>
             <!-- Placeholder for project cards -->
             <article class="project-card">
-                <h3>Project One</h3>
-                <p>A brief description of the project.</p>
+                <h3>Project: Custom Tooltip Refactor in AuctionFaster – Overcoming WoW Classic Client Changes (WotLK Era)</h3>
+                <p>AuctionFaster is a performance-focused auction house and inventory addon for World of Warcraft Classic. In early 2023, the WotLK Classic client update (pre-patch ~February 2023) introduced silent, undocumented changes to tooltip behavior — including inconsistent fontstring population, delayed text loading in hidden tooltips, and stricter handling of :SetBagItem() calls. This broke legacy libraries like LibGratuity-3.0, which addons relied on to scan item tooltips for sellability (e.g., detecting soulbound, BoP, quest-bound, or conjured items). Inventory scans became unreliable, leading to nil errors, skipped items, or incorrect auction posting logic.</p>
+                <p><h4>My Role & Changes</h4>I refactored the Inventory module to eliminate dependency on the outdated LibGratuity-3.0 and implement a robust, self-contained tooltip scanner.</p>
+                <a href="/projects/wowaf-1.html">View Project</a>
                 <!-- Add links or images as needed -->
             </article>
             <!-- More project cards can be added here -->
@@ -115,8 +107,16 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Carson McFarlane</p>
-    </footer>
+    <div id="footer"></div>
+    <script>
+        async function loadComponent(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadComponent('header', '/components/header.html');
+        loadComponent('footer', '/components/footer.html');
+    </script>
 </body>
 </html>

@@ -1,27 +1,41 @@
 /* The "Clean Slate" Reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+header {
+  /* text-align: center; */
+  padding: 2rem 0;
+  border-bottom: 1px solid #ddd;
+}
 
+a {
+    color: var(--accent);
+  }
 
 nav ul {
     list-style: none; /* Removes bullets */
     padding: 0;
     display: flex;    /* Makes them horizontal */
-    gap: 1rem;       /* Adds space between links */
+    gap: 1.5rem;       /* Adds space between links */
+    justify-content: right;
+    margin-top: 1rem;
 }
 
 nav a {
     text-decoration: none; /* Removes the underline */
-    color: var(--accent); /* Uses your variable! */
+    font-weight: 500;
 }
 
 nav a:hover {
     text-decoration: underline;
     opacity: 0.8;
+}
+
+section {
+  margin: 3rem 0;
 }
 
 
@@ -35,13 +49,22 @@ nav a:hover {
 
 /* Add breathing room to the whole page */
 body {
-    /* padding: 20px; */
     line-height: 1.6; /* Makes text much easier to read */
+}
+
+main {
+    max-width: 900px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--accent);
 }
 
 /* Add space below headings and paragraphs */
 h1, h2, h3, p {
-    margin-bottom: 1.2rem; 
+    margin-bottom: 1.2rem;
 }
 
 /* Space out your sections */
@@ -49,8 +72,38 @@ section {
     padding: 40px 0; 
 }
 
+ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
 a:link {
   color: var(--accent);
   background-color: transparent;
   text-decoration: none;
+}
+
+/* Larger screens get more breathing room */
+@media (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+
+  body { padding: 2rem; }
+  
+  #intro {
+    padding: 6rem 4rem;  /* bigger hero on tablet+ */
+  }
+  
+  nav ul {
+    justify-content: center;  /* or keep right if you prefer */
+  }
+}
+
+
+/* Optional: extra large screens */
+@media (min-width: 1024px) {
+  main {
+    padding: 3rem;
+  }
 }

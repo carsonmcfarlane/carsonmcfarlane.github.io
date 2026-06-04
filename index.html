@@ -50,20 +50,28 @@
     <main>
         <section id="intro">
             <h2>Hey! I'm Carson</h2>
-            <p>I'm a Creator and Tech Enthusiast.</p>
+            <p>Learning web development through hands-on projects, scripting, and real-world technical problem solving.</p>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <!-- <p>Emerging IT Professional, Photographer, Hobbiest Web Developer.</p> -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <!-- Placeholder for project cards -->
+            <article class="project-card">
+                <h3>AuctionFaster Addon Refactor (Lua)</h3>
+                <p>Refactored a broken World of Warcraft addon by replacing deprecated tooltip functionality and restoring compatibility after client changes.</p>
+                <p><h4>My Role & Changes</h4>I refactored the Inventory module to eliminate dependency on the outdated LibGratuity-3.0 and implement a robust, self-contained tooltip scanner.</p>
+                <a href="/projects/wowAF-1.html">View Project</a>
+                <!-- Add links or images as needed -->
+            </article>
+            <!-- More project cards can be added here -->
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Here are some of my skills:</p>
             <ul>
-                <li>I'm an emerging IT Professional with a passion for technology and problem-solving.</li>
-                <li>A hobbyist Web Developer, building projects to learn, grow my skills, and share my creativity.</li>
-                <li>Photographer, capturing moments and expressing myself through images.</li>
-                <li>Always eager to learn and explore new technologies.</li>
-                <li>Exploring the latest in IT and technology trends.</li>
-                <li>I have a passion for capturing moments through photography.</li>
-                <li>I'm curious and constantly learning.</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Photography and Photo Editing</li>
             </ul>
         </section>
 
@@ -78,28 +86,16 @@
             </ul>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Here are some of my skills:</p>
+        <section id="about">
+            <h2>About Me</h2>
+            <!-- <p>Emerging IT Professional, Photographer, Hobbiest Web Developer.</p> -->
             <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li></li>
-                <li>Photography and Photo Editing</li>
+                <li>Emerging developer with interests in web development, scripting, and problem solving.</li>
+                <li>Experience building personal projects using HTML, CSS, JavaScript, and Lua.</li>
+                <li>Interested in frontend development, automation, and learning new technologies.</li>
             </ul>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <!-- Placeholder for project cards -->
-            <article class="project-card">
-                <h3>Project: Custom Tooltip Refactor in AuctionFaster – Overcoming WoW Classic Client Changes (WotLK Era)</h3>
-                <p>AuctionFaster is a performance-focused auction house and inventory addon for World of Warcraft Classic. In early 2023, the WotLK Classic client update (pre-patch ~February 2023) introduced silent, undocumented changes to tooltip behavior — including inconsistent fontstring population, delayed text loading in hidden tooltips, and stricter handling of :SetBagItem() calls. This broke legacy libraries like LibGratuity-3.0, which addons relied on to scan item tooltips for sellability (e.g., detecting soulbound, BoP, quest-bound, or conjured items). Inventory scans became unreliable, leading to nil errors, skipped items, or incorrect auction posting logic.</p>
-                <p><h4>My Role & Changes</h4>I refactored the Inventory module to eliminate dependency on the outdated LibGratuity-3.0 and implement a robust, self-contained tooltip scanner.</p>
-                <a href="/projects/wowAF-1.html">View Project</a>
-                <!-- Add links or images as needed -->
-            </article>
-            <!-- More project cards can be added here -->
-        </section>
     </main>
 
     <div id="footer"></div>

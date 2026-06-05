@@ -48,18 +48,28 @@
     <div id="header"></div>
     <main>
         <section>
-            <h3>Project: Custom Tooltip Refactor in AuctionFaster – Overcoming WoW Classic Client Changes (TBC Anniversary / WotLK Era)</h3>
+            <h3>AuctionFaster Addon Refactor (Lua)</h3>
             <h4>Key personal contributions (marked in code comments as "My changes only"):</h4>
             <ul>
-                <li>Refactored the Inventory module to eliminate dependency on the outdated LibGratuity-3.0 and implement a robust, self-contained tooltip scanner.</li>
-                <li>Implemented a custom tooltip creation and scanning mechanism that directly interacts with the WoW API, ensuring compatibility with the latest client changes.</li>
-                <li>Added comprehensive error handling and fallback logic to gracefully manage edge cases where tooltip data may be incomplete or delayed.</li>
-                <li>Conducted extensive testing across various item types (soulbound, BoP, quest-bound, conjured) to validate the accuracy and reliability of the new tooltip scanning approach.</li>
-                <li>Removed LibGratuity-3.0 usage entirely (commented out LibStub load and all :SetBagItem(), :NumLines(), :GetLine() calls) to avoid compatibility failures.</li>
+                <li>Refactored a broken World of Warcraft addon by replacing a deprecated tooltip dependency with a custom tooltip-based scanning system using the WoW API.</li>
+                <li>Built a custom tooltip scanner using the WoW API to replace deprecated library behavior</li>
+                <li>Added fallback handling for incomplete tooltip data</li>
+                <li>Tested across multiple item types (BoP, quest, conjured items)</li>
+                <li>Removed LibGratuity-3.0 dependency and legacy tooltip calls</li>
                 <li>Added a single, reusable hidden tooltip frame created once at module scope:</li>
             </ul>
+            <!--
             <p class="code">local tt = CreateFrame("GameTooltip", "CustomAuctionFasterTooltip", nil, "GameTooltipTemplate")
 tt:SetOwner(UIParent, "ANCHOR_NONE")</p>
+            -->
+            <pre class="code"><code>
+/* Reference snippet (tooltip frame creation)
+
+local tt = CreateFrame("GameTooltip", "CustomAuctionFasterTooltip", nil, "GameTooltipTemplate")
+tt:SetOwner(UIParent, "ANCHOR_NONE")
+
+*/
+            </code></pre>
         </section>
     </main>
     <div id="footer"></div>
